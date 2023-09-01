@@ -7,7 +7,7 @@ import { errorlogger, logger } from './shared/logger';
 async function bootstrap() {
 
   const server: Server = app.listen(config.port, () => {
-    logger.info(`Server running on port ${config.port}`);
+    logger.info(`Server running on port ${config.port ||5000}`);
   });
 
   const exitHandler = () => {
